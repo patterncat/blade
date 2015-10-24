@@ -39,7 +39,7 @@ public class App extends Bootstrap {
 	
 	public static void main(String[] args) throws Exception {
 		Blade blade = Blade.me();
-		blade.get("/").run(request, response) -> {
+		blade.get("/", (request, response) -> {
 			response.html("<h1>Hello blade!</h1>");
 			return null;
 		});
